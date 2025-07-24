@@ -1,0 +1,17 @@
+### Listar limites de categoria
+GET http://localhost:3000/api/category-limits
+Authorization: Bearer {{token}}
+
+### Criar/atualizar limite de categoria
+POST http://localhost:3000/api/category-limits
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "categoriaId": "{{categoriaId}}",
+  "valor": 500
+}
+
+### Remover limite de categoria
+DELETE http://localhost:3000/api/category-limits/Alimentação
+Authorization: Bearer {{token}}
