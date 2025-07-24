@@ -58,7 +58,7 @@ NODE_ENV=development
 SECRET_KEY=sua_chave_secreta_aqui
 
 # Configurações do MongoDB
-MONGODB_URI=mongodb+srv://usuario:senha@cluster.mongodb.net/
+MONGODB_URI=mongodb+srv://
 MONGODB_DB_NAME=nocontrole
 
 # Configurações JWT
