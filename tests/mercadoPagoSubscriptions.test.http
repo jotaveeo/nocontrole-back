@@ -1,0 +1,41 @@
+### Criar plano mensal com pro rata
+POST http://localhost:3000/api/mercado-pago/plan
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "reason": "Academia Mensal",
+  "auto_recurring": {
+    "frequency": 1,
+    "frequency_type": "months",
+    "repetitions": 12,
+    "billing_day": 10,
+    "billing_day_proportional": true,
+    "transaction_amount": 120,
+    "currency_id": "BRL"
+  },
+  "back_url": "https://seusite.com"
+}
+
+### Criar assinatura vinculada ao plano
+POST http://localhost:3000/api/mercado-pago/subscription
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "preapproval_plan_id": "COLE_AQUI_O_ID_DO_PLANO",
+  "reason": "Academia Mensal",
+  "external_reference": "ACADE-1234",
+  "payer_email": "cliente@exemplo.com",
+  "card_token_id": "COLE_AQUI_O_CARD_TOKEN_ID",
+  "auto_recurring": {
+    "frequency": 1,
+    "frequency_type": "months",
+    "start_date": "2025-07-24T13:07:14.260Z",
+    "end_date": "2026-07-24T15:59:52.581Z",
+    "transaction_amount": 120,
+    "currency_id": "BRL"
+  },
+  "back_url": "https://seusite.com",
+  "status": "authorized"
+}

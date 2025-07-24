@@ -1,3 +1,5 @@
+const mercadoPagoSubscriptionsRoutes = require('./mercadoPagoSubscriptions');
+router.use('/mercado-pago', mercadoPagoSubscriptionsRoutes);
 const express = require('express');
 const authRoutes = require('./auth');
 const categoryRoutes = require('./categories');
