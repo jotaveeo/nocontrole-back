@@ -1,9 +1,8 @@
 const express = require('express');
 const controller = require('../controllers/mercadoPagoSubscriptionController');
-const { authenticate } = require('../middlewares/auth');
 
 const router = express.Router();
-router.use(authenticate);
+// router.use(authenticate);
 
 // Criar plano de assinatura
 router.post('/plan', controller.createPlan);

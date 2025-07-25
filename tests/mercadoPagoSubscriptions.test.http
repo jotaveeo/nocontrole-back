@@ -1,5 +1,5 @@
-### Criar plano mensal com pro rata
-POST http://localhost:3000/api/mercado-pago/plan
+### Criar plano de assinatura
+POST https://nocontrole-back.onrender.com/api/mercado-pago/plan
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -10,7 +10,7 @@ Authorization: Bearer {{token}}
     "frequency_type": "months",
     "repetitions": 12,
     "billing_day": 10,
-    "billing_day_proportional": true,
+    "billing_day_proportional": false,
     "transaction_amount": 120,
     "currency_id": "BRL"
   },
@@ -18,7 +18,7 @@ Authorization: Bearer {{token}}
 }
 
 ### Criar assinatura vinculada ao plano
-POST http://localhost:3000/api/mercado-pago/subscription
+POST https://nocontrole-back.onrender.com/api/mercado-pago/subscription
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
