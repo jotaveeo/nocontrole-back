@@ -1,6 +1,5 @@
-const mercadoPagoSubscriptionsRoutes = require('./mercadoPagoSubscriptions');
-router.use('/mercado-pago', mercadoPagoSubscriptionsRoutes);
 const express = require('express');
+const mercadoPagoSubscriptionsRoutes = require('./mercadoPagoSubscriptions');
 const authRoutes = require('./auth');
 const categoryRoutes = require('./categories');
 const piggyBankRoutes = require('./piggybank');
@@ -60,6 +59,9 @@ router.use('/incomes', incomesRoutes);
 
 // Limites de categoria
 router.use('/category-limits', categoryLimitsRoutes);
+
+// Mercado Pago
+router.use('/mercado-pago', mercadoPagoSubscriptionsRoutes);
 
 module.exports = router;
 
